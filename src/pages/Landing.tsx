@@ -48,7 +48,7 @@ export default function Landing() {
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
             {/* Narrower container to increase lines and avoid face overlap */}
-            <div className="max-w-[12rem] md:max-w-[16rem] lg:max-w-[22rem]" style={{ marginTop: "15vh", textAlign: "justify" }}>
+            <div className="max-w-[12rem] md:max-w-[16rem] lg:max-w-[22rem]" style={{ marginTop: "20vh", textAlign: "justify" }}>
               <motion.p
                 variants={containerVariants}
                 initial="hidden"
