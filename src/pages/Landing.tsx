@@ -26,7 +26,7 @@ export default function Landing() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white whitespace-nowrap"
-            style={{ fontFamily: "'Switzer', sans-serif" }}
+            style={{ fontFamily: "'Anton', sans-serif" }}
           >
             SUNHITH REDDY
           </motion.h1>
