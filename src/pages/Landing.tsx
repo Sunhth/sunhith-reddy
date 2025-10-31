@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-[#FFEB3B]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Full Screen Background Image */}
@@ -34,20 +34,20 @@ export default function Landing() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-[#00FF80]">
-        <div className="max-w-6xl mx-auto">
+      <section id="about" className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-black neo-border neo-shadow bg-white px-8 py-4 inline-block -rotate-1 mb-12">
-              ABOUT ME
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              About Me
             </h2>
             
-            <Card className="neo-border neo-shadow bg-white p-8 md:p-12 rotate-1 mt-8">
-              <p className="text-xl md:text-2xl font-bold text-black leading-relaxed">
+            <Card className="border border-gray-200 bg-white p-8 md:p-12 shadow-sm">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Hey! I'm Sunhith Reddy, a passionate developer and creative problem solver. 
                 I love building things that make a difference and pushing the boundaries of what's possible with code.
               </p>
@@ -57,26 +57,26 @@ export default function Landing() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4 bg-[#0080FF]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-white neo-border neo-shadow bg-black px-8 py-4 inline-block rotate-1 mb-12">
-              SKILLS
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Skills
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: Code, title: "FRONTEND", color: "#FF0080" },
-                { icon: Code, title: "BACKEND", color: "#00FF80" },
-                { icon: Code, title: "DESIGN", color: "#FFEB3B" },
-                { icon: Briefcase, title: "LEADERSHIP", color: "#FF0080" },
-                { icon: Code, title: "DATABASES", color: "#00FF80" },
-                { icon: Briefcase, title: "DEVOPS", color: "#FFEB3B" },
+                { icon: Code, title: "Frontend" },
+                { icon: Code, title: "Backend" },
+                { icon: Code, title: "Design" },
+                { icon: Briefcase, title: "Leadership" },
+                { icon: Code, title: "Databases" },
+                { icon: Briefcase, title: "DevOps" },
               ].map((skill, index) => (
                 <motion.div
                   key={skill.title}
@@ -84,14 +84,13 @@ export default function Landing() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ rotate: -2, scale: 1.05 }}
+                  whileHover={{ scale: 1.05 }}
                 >
                   <Card 
-                    className="neo-border neo-shadow p-6 text-center cursor-pointer"
-                    style={{ backgroundColor: skill.color }}
+                    className="border border-gray-200 bg-white p-6 text-center cursor-pointer shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <skill.icon className="h-12 w-12 mx-auto mb-4 text-black" strokeWidth={3} />
-                    <h3 className="text-2xl font-bold text-black">{skill.title}</h3>
+                    <skill.icon className="h-10 w-10 mx-auto mb-4 text-gray-700" strokeWidth={2} />
+                    <h3 className="text-xl font-semibold text-gray-900">{skill.title}</h3>
                   </Card>
                 </motion.div>
               ))}
@@ -101,24 +100,24 @@ export default function Landing() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 bg-[#FF0080]">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-black neo-border neo-shadow bg-[#FFEB3B] px-8 py-4 inline-block -rotate-1 mb-12">
-              PROJECTS
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Projects
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: "PROJECT ONE", desc: "An awesome project that does amazing things", color: "#00FF80" },
-                { title: "PROJECT TWO", desc: "Another incredible build with cutting-edge tech", color: "#0080FF" },
-                { title: "PROJECT THREE", desc: "A revolutionary app that changes everything", color: "#FFEB3B" },
-                { title: "PROJECT FOUR", desc: "The future of web development starts here", color: "#00FF80" },
+                { title: "Project One", desc: "An awesome project that does amazing things" },
+                { title: "Project Two", desc: "Another incredible build with cutting-edge tech" },
+                { title: "Project Three", desc: "A revolutionary app that changes everything" },
+                { title: "Project Four", desc: "The future of web development starts here" },
               ].map((project, index) => (
                 <motion.div
                   key={project.title}
@@ -126,17 +125,13 @@ export default function Landing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ rotate: 2, scale: 1.02 }}
+                  whileHover={{ scale: 1.02 }}
                 >
                   <Card 
-                    className="neo-border neo-shadow p-8 cursor-pointer bg-white"
+                    className="border border-gray-200 bg-white p-8 cursor-pointer shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div 
-                      className="w-full h-3 mb-4 neo-border-thin"
-                      style={{ backgroundColor: project.color }}
-                    ></div>
-                    <h3 className="text-3xl font-bold text-black mb-3">{project.title}</h3>
-                    <p className="text-lg font-bold text-black/70">{project.desc}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                    <p className="text-base text-gray-600">{project.desc}</p>
                   </Card>
                 </motion.div>
               ))}
@@ -147,46 +142,46 @@ export default function Landing() {
 
       {/* Contact Section */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-white neo-border neo-shadow bg-black px-8 py-4 inline-block rotate-1 mb-12">
-              GET IN TOUCH
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Get In Touch
             </h2>
             
-            <Card className="neo-border neo-shadow bg-[#00FF80] p-12 -rotate-1 mt-8">
-              <p className="text-2xl md:text-3xl font-bold text-black mb-8">
+            <Card className="border border-gray-200 bg-white p-12 shadow-sm">
+              <p className="text-xl md:text-2xl text-gray-700 mb-8">
                 Let's build something amazing together!
               </p>
               
               <div className="flex flex-wrap justify-center gap-4">
                 <Button
                   size="lg"
-                  className="neo-border neo-shadow-sm bg-[#0080FF] hover:bg-[#0080FF] text-white font-bold text-lg px-6 py-6 rotate-2 hover:rotate-0 transition-transform"
+                  className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
                 >
-                  <Mail className="mr-2 h-5 w-5" /> EMAIL
+                  <Mail className="mr-2 h-5 w-5" /> Email
                 </Button>
                 <Button
                   size="lg"
-                  className="neo-border neo-shadow-sm bg-black hover:bg-black text-white font-bold text-lg px-6 py-6 -rotate-2 hover:rotate-0 transition-transform"
+                  className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
                 >
-                  <Github className="mr-2 h-5 w-5" /> GITHUB
+                  <Github className="mr-2 h-5 w-5" /> GitHub
                 </Button>
                 <Button
                   size="lg"
-                  className="neo-border neo-shadow-sm bg-[#FF0080] hover:bg-[#FF0080] text-white font-bold text-lg px-6 py-6 rotate-1 hover:rotate-0 transition-transform"
+                  className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
                 >
-                  <Linkedin className="mr-2 h-5 w-5" /> LINKEDIN
+                  <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
                 </Button>
                 <Button
                   size="lg"
-                  className="neo-border neo-shadow-sm bg-[#FFEB3B] hover:bg-[#FFEB3B] text-black font-bold text-lg px-6 py-6 -rotate-1 hover:rotate-0 transition-transform"
+                  className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
                 >
-                  <Twitter className="mr-2 h-5 w-5" /> TWITTER
+                  <Twitter className="mr-2 h-5 w-5" /> Twitter
                 </Button>
               </div>
             </Card>
@@ -195,10 +190,10 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-black">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-white font-bold text-xl">
-            © 2024 SUNHITH REDDY. ALL RIGHTS RESERVED.
+      <footer className="py-8 px-4 bg-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-white font-medium text-base">
+            © 2024 Sunhith Reddy. All rights reserved.
           </p>
         </div>
       </footer>
