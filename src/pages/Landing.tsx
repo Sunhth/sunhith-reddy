@@ -23,7 +23,6 @@ export default function Landing() {
         <div className="absolute top-0 left-0 right-0 flex justify-between items-center p-8 z-20">
           <div className="flex items-center gap-2">
             <span className="text-white font-bold text-lg">Sunhith Reddy</span>
-            <span className="text-white">•</span>
             <span className="flex items-center gap-2">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -45,12 +44,6 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Experience Text */}
-            <div className="mb-4">
-              <p className="text-cyan-400 font-bold text-2xl md:text-3xl mb-1">2014→2025</p>
-              <p className="text-cyan-400 font-bold text-2xl md:text-3xl">10+ yrs exp.</p>
-            </div>
-
             {/* Main Name */}
             <h1
               className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-none mb-4 whitespace-nowrap"
@@ -64,11 +57,6 @@ export default function Landing() {
               Senior Software Engineer, based in Los Angeles
             </p>
           </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 right-8 z-20">
-          <p className="text-white font-medium">Scroll</p>
         </div>
       </section>
 
