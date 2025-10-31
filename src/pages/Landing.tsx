@@ -53,8 +53,8 @@ export default function Landing() {
               <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
-            <div className="max-w-2xl">
-              <p className="text-white text-lg md:text-xl lg:text-2xl text-right leading-relaxed font-semibold uppercase tracking-wide">
+            <div className="max-w-md md:max-w-lg lg:max-w-xl">
+              <p className="text-white text-base md:text-lg lg:text-xl text-right leading-relaxed font-semibold uppercase tracking-wide">
                 " {displayedText} "
                 <span className="animate-pulse">|</span>
               </p>
