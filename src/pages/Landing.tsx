@@ -48,20 +48,18 @@ export default function Landing() {
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
             {/* Narrower container to increase lines and avoid face overlap */}
-            <div className="max-w-[12rem] md:max-w-[16rem] lg:max-w-[22rem]" style={{ marginTop: "10vh" }}>
+            <div className="max-w-[12rem] md:max-w-[16rem] lg:max-w-[22rem]" style={{ marginTop: "10vh", textAlign: "justify" }}>
               <motion.p
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-white text-xs md:text-sm lg:text-base text-right leading-relaxed font-semibold uppercase tracking-wide"
+                className="text-white text-xs md:text-sm lg:text-base leading-relaxed font-semibold uppercase tracking-wide"
               >
-                <span className="mr-1">"Sunhith Reddy"</span>
                 {words.map((word, i) => (
-                  <motion.span key={i} variants={wordVariants} className="inline-block mr-1">
+                  <motion.span key={i} variants={wordVariants} className="inline mr-1">
                     {word}
                   </motion.span>
                 ))}
-                <span>"</span>
               </motion.p>
             </div>
           </div>
