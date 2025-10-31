@@ -20,12 +20,12 @@ export default function Landing() {
         </div>
 
         {/* Name Section - Overlaid on Image */}
-        <div className="relative z-10 text-center px-4">
+        <div className="relative z-10 text-center px-4 translate-y-[25vh]">
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white neo-border neo-shadow bg-black px-8 py-6 inline-block -rotate-2 whitespace-nowrap"
+            className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white whitespace-nowrap"
           >
             SUNHITH REDDY
           </motion.h1>
