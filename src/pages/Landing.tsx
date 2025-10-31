@@ -7,7 +7,7 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen flex items-end justify-start relative overflow-hidden pb-20 pl-8 md:pl-16 lg:pl-24">
         {/* Full Screen Background Image */}
         <div className="absolute inset-0">
           <img
@@ -19,17 +19,50 @@ export default function Landing() {
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
-        {/* Name Section - Overlaid on Image */}
-        <div className="relative z-10 text-center px-4 translate-y-[40vh]">
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl xl:text-[10rem] font-bold text-white whitespace-nowrap"
-            style={{ fontFamily: "'Alfa Slab One', sans-serif" }}
+        {/* Top Navigation */}
+        <div className="absolute top-0 left-0 right-0 flex justify-between items-center p-8 z-20">
+          <div className="flex items-center gap-2">
+            <span className="text-white font-bold text-lg">Sunhith Reddy</span>
+            <span className="text-white">•</span>
+            <span className="text-cyan-400 font-semibold">Available for work</span>
+          </div>
+          <div className="flex gap-6 text-white font-medium">
+            <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
+            <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
+          </div>
+        </div>
+
+        {/* Name Section - Bottom Left */}
+        <div className="relative z-10 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            SUNHITH REDDY
-          </motion.h1>
+            {/* Experience Text */}
+            <div className="mb-4">
+              <p className="text-cyan-400 font-bold text-2xl md:text-3xl mb-1">2014→2025</p>
+              <p className="text-cyan-400 font-bold text-2xl md:text-3xl">10+ yrs exp.</p>
+            </div>
+
+            {/* Main Name */}
+            <h1
+              className="text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white leading-none mb-4"
+              style={{ fontFamily: "'Alfa Slab One', sans-serif" }}
+            >
+              SUNHITH REDDY
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-white text-xl md:text-2xl font-medium">
+              Senior Software Engineer, based in Los Angeles
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 right-8 z-20">
+          <p className="text-white font-medium">Scroll</p>
         </div>
       </section>
 
