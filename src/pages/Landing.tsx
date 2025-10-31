@@ -2,25 +2,9 @@ import { motion } from "framer-motion";
 import { Briefcase, Code, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useState, useEffect } from "react";
 
 export default function Landing() {
-  const [displayedText, setDisplayedText] = useState("");
   const fullText = "Whether it's writing code or structuring a life, I aim for clarity, calm and long-term impact. I believe good systems are built with intent and consistency";
-  
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index <= fullText.length) {
-        setDisplayedText(fullText.slice(0, index));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 50);
-    
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -53,11 +37,15 @@ export default function Landing() {
               <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
-            <div className="max-w-md md:max-w-lg lg:max-w-xl">
-              <p className="text-white text-base md:text-lg lg:text-xl text-right leading-relaxed font-semibold uppercase tracking-wide">
-                " {displayedText} "
-                <span className="animate-pulse">|</span>
-              </p>
+            <div className="max-w-sm md:max-w-md lg:max-w-lg">
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.2, delay: 0.2 }}
+                className="text-white text-base md:text-lg lg:text-xl text-right leading-relaxed font-semibold uppercase tracking-wide"
+              >
+                " {fullText} "
+              </motion.p>
             </div>
           </div>
         </div>
