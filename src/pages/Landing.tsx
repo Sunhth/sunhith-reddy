@@ -20,7 +20,7 @@ export default function Landing() {
         </div>
 
         {/* Name Section - Overlaid on Image */}
-        <div className="relative z-10 text-center px-4 translate-y-[25vh]">
+        <div className="relative z-10 text-center px-4 translate-y-[50vh]">
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
