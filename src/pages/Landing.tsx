@@ -53,10 +53,10 @@ export default function Landing() {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-white text-xs md:text-sm lg:text-base leading-relaxed font-semibold uppercase tracking-wide"
+                className="text-white text-xs md:text-sm lg:text-base font-semibold uppercase tracking-normal leading-7 md:leading-8"
               >
                 {words.map((word, i) => (
-                  <motion.span key={i} variants={wordVariants} className="inline mr-1">
+                  <motion.span key={i} variants={wordVariants} className="inline-block mr-1.5">
                     {word}
                   </motion.span>
                 ))}
