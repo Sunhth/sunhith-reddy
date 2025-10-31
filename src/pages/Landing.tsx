@@ -2,8 +2,26 @@ import { motion } from "framer-motion";
 import { Briefcase, Code, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useState, useEffect } from "react";
 
 export default function Landing() {
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = "Whether it's writing code or structuring a life, I aim for clarity, calm and long-term impact. I believe good systems are built with intent and consistency";
+  
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setDisplayedText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 50); // Adjust speed here (50ms per character)
+    
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -20,7 +38,7 @@ export default function Landing() {
         </div>
 
         {/* Top Navigation */}
-        <div className="absolute top-0 left-0 right-0 flex justify-between items-center p-8 z-20">
+        <div className="absolute top-0 left-0 right-0 flex justify-between items-start p-8 z-20">
           <div className="flex items-center gap-2">
             <span className="text-white font-bold text-lg">Sunhith Reddy</span>
             <span className="flex items-center gap-2">
@@ -31,9 +49,15 @@ export default function Landing() {
               <span className="text-green-500 font-semibold">Available for work</span>
             </span>
           </div>
-          <div className="flex gap-6 text-white font-medium">
-            <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
+          <div className="flex flex-col items-end gap-4">
+            <div className="flex gap-6 text-white font-medium">
+              <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
+              <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
+            </div>
+            <p className="text-white text-sm md:text-base max-w-md text-right leading-relaxed">
+              {displayedText}
+              <span className="animate-pulse">|</span>
+            </p>
           </div>
         </div>
 
