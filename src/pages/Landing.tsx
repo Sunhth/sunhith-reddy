@@ -5,6 +5,16 @@ import { Card } from "@/components/ui/card";
 
 export default function Landing() {
   const fullText = "Whether it's writing code or structuring a life, I aim for clarity, calm and long-term impact. I believe good systems are built with intent and consistency";
+  // Word-by-word fade-in animation setup
+  const words = fullText.split(" ");
+  const containerVariants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.05 } },
+  };
+  const wordVariants = {
+    hidden: { opacity: 0, y: 2 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -37,14 +47,21 @@ export default function Landing() {
               <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
-            <div className="max-w-sm md:max-w-md lg:max-w-lg">
+            {/* Narrower container to increase lines and avoid face overlap */}
+            <div className="max-w-xs md:max-w-sm lg:max-w-md">
               <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.2, delay: 0.2 }}
-                className="text-white text-base md:text-lg lg:text-xl text-right leading-relaxed font-semibold uppercase tracking-wide"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="text-white text-sm md:text-base lg:text-lg text-right leading-relaxed font-semibold uppercase tracking-wide"
               >
-                " {fullText} "
+                <span className="mr-1">“</span>
+                {words.map((word, i) => (
+                  <motion.span key={i} variants={wordVariants} className="inline-block mr-1">
+                    {word}
+                  </motion.span>
+                ))}
+                <span>”</span>
               </motion.p>
             </div>
           </div>
