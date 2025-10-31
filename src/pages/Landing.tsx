@@ -26,6 +26,11 @@ export default function Landing() {
             src="https://harmless-tapir-303.convex.cloud/api/storage/b893c057-493c-4ac6-89c8-ea6a32c629c5"
             alt="Sunhith Reddy"
             className="w-full h-full object-cover"
+            // Fallback if remote image fails to load (prevents "refused to connect" blank hero)
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = "/logo_bg.png";
+            }}
           />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
