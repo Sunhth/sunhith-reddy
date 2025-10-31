@@ -7,71 +7,45 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-[#FFEB3B]">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
-        <div className="max-w-7xl w-full mx-auto">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        {/* Full Screen Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src="https://harmless-tapir-303.convex.cloud/api/storage/b893c057-493c-4ac6-89c8-ea6a32c629c5"
+            alt="Sunhith Reddy"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        {/* Name Section - Overlaid on Image */}
+        <div className="relative z-10 text-center px-4">
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-6xl md:text-8xl lg:text-9xl font-bold text-white neo-border neo-shadow bg-black px-8 py-6 inline-block -rotate-2"
+            style={{ lineHeight: 1.1 }}
+          >
+            SUNHITH<br />REDDY
+          </motion.h1>
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="grid lg:grid-cols-2 gap-12 items-center"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-8"
           >
-            {/* Image Section */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center lg:justify-end order-2 lg:order-1"
+            <Button
+              size="lg"
+              className="neo-border neo-shadow-sm bg-[#00FF80] hover:bg-[#00FF80] text-black font-bold text-xl px-8 py-6 rotate-1 hover:rotate-0 transition-transform"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <div className="relative">
-                <div className="absolute -inset-4 bg-[#FF0080] neo-border neo-shadow rotate-3"></div>
-                <div className="relative neo-border neo-shadow bg-white overflow-hidden w-[300px] h-[300px] md:w-[400px] md:h-[400px]">
-                  <img
-                    src="https://harmless-tapir-303.convex.cloud/api/storage/b893c057-493c-4ac6-89c8-ea6a32c629c5"
-                    alt="Sunhith Reddy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Name Section */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="order-1 lg:order-2 text-center lg:text-left"
-            >
-              <motion.h1
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-6xl md:text-8xl lg:text-9xl font-bold text-white neo-border neo-shadow bg-black px-8 py-6 inline-block -rotate-2 mb-8"
-                style={{ lineHeight: 1.1 }}
-              >
-                SUNHITH<br />REDDY
-              </motion.h1>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                className="mt-8"
-              >
-                <Button
-                  size="lg"
-                  className="neo-border neo-shadow-sm bg-[#00FF80] hover:bg-[#00FF80] text-black font-bold text-xl px-8 py-6 rotate-1 hover:rotate-0 transition-transform"
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  EXPLORE <ArrowRight className="ml-2 h-6 w-6" />
-                </Button>
-              </motion.div>
-            </motion.div>
+              EXPLORE <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
           </motion.div>
         </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-[#0080FF] neo-border rotate-12 hidden md:block"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-[#FF0080] neo-border -rotate-12 hidden md:block"></div>
       </section>
 
       {/* About Section */}
