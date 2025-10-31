@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Briefcase, Code, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Briefcase, Code, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -25,26 +25,10 @@ export default function Landing() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-bold text-white neo-border neo-shadow bg-black px-8 py-6 inline-block -rotate-2"
-            style={{ lineHeight: 1.1 }}
+            className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white neo-border neo-shadow bg-black px-8 py-6 inline-block -rotate-2 whitespace-nowrap"
           >
-            SUNHITH<br />REDDY
+            SUNHITH REDDY
           </motion.h1>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8"
-          >
-            <Button
-              size="lg"
-              className="neo-border neo-shadow-sm bg-[#00FF80] hover:bg-[#00FF80] text-black font-bold text-xl px-8 py-6 rotate-1 hover:rotate-0 transition-transform"
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              EXPLORE <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
-          </motion.div>
         </div>
       </section>
 
