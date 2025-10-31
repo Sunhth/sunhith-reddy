@@ -9,11 +9,11 @@ export default function Landing() {
   const words = fullText.split(" ");
   const containerVariants = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.05 } },
+    visible: { transition: { staggerChildren: 0.12 } },
   };
   const wordVariants = {
-    hidden: { opacity: 0, y: 2 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 4 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
   };
 
   return (
@@ -48,20 +48,20 @@ export default function Landing() {
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
             {/* Narrower container to increase lines and avoid face overlap */}
-            <div className="max-w-xs md:max-w-sm lg:max-w-md">
+            <div className="max-w-[12rem] md:max-w-[16rem] lg:max-w-[22rem]" style={{ marginTop: "10vh" }}>
               <motion.p
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="text-white text-sm md:text-base lg:text-lg text-right leading-relaxed font-semibold uppercase tracking-wide"
+                className="text-white text-xs md:text-sm lg:text-base text-right leading-relaxed font-semibold uppercase tracking-wide"
               >
-                <span className="mr-1">“</span>
+                <span className="mr-1">"Sunhith Reddy"</span>
                 {words.map((word, i) => (
                   <motion.span key={i} variants={wordVariants} className="inline-block mr-1">
                     {word}
                   </motion.span>
                 ))}
-                <span>”</span>
+                <span>"</span>
               </motion.p>
             </div>
           </div>
