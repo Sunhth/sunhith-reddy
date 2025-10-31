@@ -17,7 +17,7 @@ export default function Landing() {
       } else {
         clearInterval(timer);
       }
-    }, 50); // Adjust speed here (50ms per character)
+    }, 50);
     
     return () => clearInterval(timer);
   }, []);
@@ -33,7 +33,6 @@ export default function Landing() {
             alt="Sunhith Reddy"
             className="w-full h-full object-cover"
           />
-          {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
@@ -49,13 +48,13 @@ export default function Landing() {
               <span className="text-green-500 font-semibold">Available for work</span>
             </span>
           </div>
-          <div className="flex flex-col items-end gap-4">
+          <div className="flex flex-col items-end gap-6">
             <div className="flex gap-6 text-white font-medium">
               <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
               <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
             </div>
-            <p className="text-white text-sm md:text-base max-w-md text-right leading-relaxed">
-              {displayedText}
+            <p className="text-white text-lg md:text-xl lg:text-2xl max-w-2xl text-right leading-relaxed font-medium">
+              "{displayedText}"
               <span className="animate-pulse">|</span>
             </p>
           </div>
@@ -68,7 +67,6 @@ export default function Landing() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Main Name */}
             <h1
               className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-none mb-4 whitespace-nowrap"
               style={{ fontFamily: "'Alfa Slab One', sans-serif" }}
@@ -76,7 +74,6 @@ export default function Landing() {
               SUNHITH REDDY
             </h1>
 
-            {/* Subtitle */}
             <p className="text-white text-xl md:text-2xl font-medium">
               Senior Software Engineer, based in Los Angeles
             </p>
