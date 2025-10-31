@@ -47,7 +47,7 @@ export default function Landing() {
 
             {/* Main Name */}
             <h1
-              className="text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white leading-none mb-4"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-none mb-4 whitespace-nowrap"
               style={{ fontFamily: "'Alfa Slab One', sans-serif" }}
             >
               SUNHITH REDDY
