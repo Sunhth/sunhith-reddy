@@ -361,7 +361,7 @@ export default function Landing() {
             <div className="grid md:grid-cols-2 gap-8 md:gap-10">
               {/* Card 1: Certified Software Engineer */}
               <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5 relative">
-                <div className="flex items-start gap-3">
+                <div className="flex items-center justify-center gap-3 text-center">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/da68b2ff-5fbd-41e9-afab-92a808c4a368"
                     alt="HackerRank logo"
@@ -371,7 +371,7 @@ export default function Landing() {
                       e.currentTarget.src = "/logo.png";
                     }}
                   />
-                  <div>
+                  <div className="text-center">
                     {/* Title row without the link */}
                     <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">Certified Software Engineer</h3>
@@ -394,7 +394,7 @@ export default function Landing() {
 
               {/* Card 2: Google Digital Marketing & E-commerce Specialization */}
               <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5 relative">
-                <div className="flex items-start gap-3">
+                <div className="flex items-center justify-center gap-3 text-center">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/c933c346-cd52-4bc4-8eb4-753135c8e2bb"
                     alt="Google logo"
@@ -404,7 +404,7 @@ export default function Landing() {
                       e.currentTarget.src = "/logo.png";
                     }}
                   />
-                  <div>
+                  <div className="text-center">
                     {/* Title row without the link */}
                     <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
