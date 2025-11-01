@@ -22,6 +22,14 @@ export default function Landing() {
               e.currentTarget.src = "/logo_bg.png";
             }}
           />
+          {/* Bottom 25% fade: reduce image visibility towards the bottom */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                "linear-gradient(to bottom, rgba(140,27,27,0) 75%, rgba(140,27,27,0.4) 88%, rgba(140,27,27,0.85) 100%)",
+            }}
+          />
         </div>
 
         {/* Top Navigation */}
