@@ -1,7 +1,6 @@
 /* DO NOT CHANGE */
 @import "tailwindcss";
 @import "tw-animate-css";
-@custom-variant dark (&:is(.dark *));
 
 /* Import Neo Brutalism font */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
@@ -11,6 +10,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /* Import Alfa Slab One font */
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+@custom-variant dark (&:is(.dark *));
 
 /* DO NOT CHANGE */
 @theme inline {
