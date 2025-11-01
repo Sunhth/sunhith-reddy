@@ -358,23 +358,23 @@ export default function Landing() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Certifications</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10">
               {/* Card 1: Certified Software Engineer */}
-              <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
+              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/da68b2ff-5fbd-41e9-afab-92a808c4a368"
                     alt="HackerRank logo"
-                    className="h-6 w-6 rounded-sm object-cover mt-0.5"
+                    className="h-8 w-8 rounded-sm object-cover mt-0.5"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = "/logo.png";
                     }}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Certified Software Engineer</h3>
-                    <p className="text-white/80">HackerRank • Issued Mar 2025</p>
-                    <p className="text-white/70 text-sm mt-1">Credential ID: 4DDBDD33AC34</p>
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">Certified Software Engineer</h3>
+                    <p className="text-white/80 text-base md:text-lg">HackerRank • Issued Mar 2025</p>
+                    <p className="text-white/70 text-sm md:text-base mt-1">Credential ID: 4DDBDD33AC34</p>
                     <a
                       href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
                       target="_blank"
@@ -388,21 +388,21 @@ export default function Landing() {
               </Card>
 
               {/* Card 2: Google Digital Marketing & E-commerce Specialization */}
-              <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
+              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/c933c346-cd52-4bc4-8eb4-753135c8e2bb"
                     alt="Google logo"
-                    className="h-6 w-6 rounded-sm object-cover mt-0.5"
+                    className="h-8 w-8 rounded-sm object-cover mt-0.5"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = "/logo.png";
                     }}
                   />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
-                    <p className="text-white/80">Google • Issued Jun 2024</p>
-                    <p className="text-white/70 text-sm mt-1">Credential ID: UHXWNFX8Q36Q</p>
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
+                    <p className="text-white/80 text-base md:text-lg">Google • Issued Jun 2024</p>
+                    <p className="text-white/70 text-sm md:text-base mt-1">Credential ID: UHXWNFX8Q36Q</p>
                     <a
                       href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
                       target="_blank"
