@@ -113,25 +113,25 @@ export default function Landing() {
               Skills
             </h2>
 
-            <Card className="border border-white/20 bg-transparent p-6 md:p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="border border-white/20 bg-transparent p-8 md:p-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
-                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                  className="border border-white/15 rounded-lg p-6 md:p-7 hover:bg-white/5 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <Code className="h-5 w-5 text-white" />
-                    <h3 className="text-lg font-semibold text-white">Languages &amp; Tools</h3>
+                    <Code className="h-6 w-6 text-white" />
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">Languages &amp; Tools</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-white/10 text-white border-white/20">Python</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">JavaScript</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">React</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Node.js</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">TensorFlow</Badge>
+                  <div className="flex flex-wrap gap-3">
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Python</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">JavaScript</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">React</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Node.js</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">TensorFlow</Badge>
                   </div>
                 </motion.div>
 
@@ -140,16 +140,16 @@ export default function Landing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.05 }}
-                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                  className="border border-white/15 rounded-lg p-6 md:p-7 hover:bg-white/5 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <Cpu className="h-5 w-5 text-white" />
-                    <h3 className="text-lg font-semibold text-white">AI &amp; ML</h3>
+                    <Cpu className="h-6 w-6 text-white" />
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">AI &amp; ML</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-white/10 text-white border-white/20">Data preprocessing</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Model training</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Evaluation</Badge>
+                  <div className="flex flex-wrap gap-3">
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Data preprocessing</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Model training</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Evaluation</Badge>
                   </div>
                 </motion.div>
 
@@ -158,16 +158,16 @@ export default function Landing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.1 }}
-                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                  className="border border-white/15 rounded-lg p-6 md:p-7 hover:bg-white/5 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <Globe className="h-5 w-5 text-white" />
-                    <h3 className="text-lg font-semibold text-white">Web Development</h3>
+                    <Globe className="h-6 w-6 text-white" />
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">Web Development</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-white/10 text-white border-white/20">Front-end</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Full-stack</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Auth systems</Badge>
+                  <div className="flex flex-wrap gap-3">
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Front-end</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Full-stack</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Auth systems</Badge>
                   </div>
                 </motion.div>
 
@@ -176,16 +176,16 @@ export default function Landing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.15 }}
-                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                  className="border border-white/15 rounded-lg p-6 md:p-7 hover:bg-white/5 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <Users className="h-5 w-5 text-white" />
-                    <h3 className="text-lg font-semibold text-white">Soft Skills</h3>
+                    <Users className="h-6 w-6 text-white" />
+                    <h3 className="text-xl md:text-2xl font-semibold text-white">Soft Skills</h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge className="bg-white/10 text-white border-white/20">Problem‑solving</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Teamwork</Badge>
-                    <Badge className="bg-white/10 text-white border-white/20">Adaptability</Badge>
+                  <div className="flex flex-wrap gap-3">
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Problem‑solving</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Teamwork</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20 text-sm md:text-base px-3 py-1.5">Adaptability</Badge>
                   </div>
                 </motion.div>
               </div>
