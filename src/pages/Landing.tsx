@@ -92,8 +92,7 @@ export default function Landing() {
             
             <Card className="border border-white/20 bg-transparent p-8 md:p-12">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                Hey! I'm Sunhith Reddy, a passionate developer and creative problem solver. 
-                I love building things that make a difference and pushing the boundaries of what's possible with code.
+                I'm Sunhith Reddy. I like building things that actually work — websites, AI systems, whatever challenges me. I learn fast, I don't quit on problems, and I believe skill matters more than experience. Right now, I'm focused on improving my tech skills and creating projects that speak for themselves.
               </p>
             </Card>
           </motion.div>
