@@ -386,7 +386,7 @@ export default function Landing() {
                   href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-[5px] left-8 md:left-10 text-white underline hover:text-white/90 text-lg md:text-xl"
+                  className="absolute bottom-[5px] left-0 right-0 text-center text-white hover:text-white/90 text-lg md:text-xl"
                 >
                   View Credential
                 </a>
@@ -419,7 +419,7 @@ export default function Landing() {
                   href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-[5px] left-8 md:left-10 text-white underline hover:text-white/90 text-lg md:text-xl"
+                  className="absolute bottom-[5px] left-0 right-0 text-center text-white hover:text-white/90 text-lg md:text-xl"
                 >
                   View Credential
                 </a>
