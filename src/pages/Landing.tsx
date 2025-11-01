@@ -311,8 +311,9 @@ export default function Landing() {
                 <div className="flex items-start gap-4">
                   <GraduationCap className="h-6 w-6 text-white mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-white">B.Tech in Computer Science</h3>
-                    <p className="text-white/80">Your University • 2021 — 2025</p>
+                    <h3 className="text-xl font-semibold text-white">Bachelor of Computer Applications (BCA)</h3>
+                    <p className="text-white/80">Mohan Babu University • 2022 — 2025 • Tirupati, India</p>
+                    <p className="text-white/80 mt-2">Focus: Augmented Reality, Virtual Reality</p>
                   </div>
                 </div>
               </Card>
