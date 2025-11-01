@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code, Mail, Github, Linkedin, Twitter, GraduationCap, BadgeCheck } from "lucide-react";
+import { Briefcase, Code, Mail, Github, Linkedin, GraduationCap, BadgeCheck, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -290,26 +290,30 @@ export default function Landing() {
                 <Button
                   size="lg"
                   className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
+                  onClick={() => (window.location.href = "mailto:iamtsr2004@gmail.com")}
                 >
                   <Mail className="mr-2 h-5 w-5" /> Email
                 </Button>
                 <Button
                   size="lg"
                   className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
+                  onClick={() => window.open("https://github.com/SunhithReddy647", "_blank")}
                 >
                   <Github className="mr-2 h-5 w-5" /> GitHub
                 </Button>
                 <Button
                   size="lg"
                   className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
+                  onClick={() => window.open("https://www.linkedin.com/in/sunhithreddy", "_blank")}
                 >
                   <Linkedin className="mr-2 h-5 w-5" /> LinkedIn
                 </Button>
                 <Button
                   size="lg"
                   className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
+                  onClick={() => window.open("https://instagram.com/sunhith_reddy", "_blank")}
                 >
-                  <Twitter className="mr-2 h-5 w-5" /> Twitter
+                  <Instagram className="mr-2 h-5 w-5" /> Instagram
                 </Button>
               </div>
             </Card>
