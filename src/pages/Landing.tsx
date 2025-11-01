@@ -64,7 +64,7 @@ export default function Landing() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-none mb-4 whitespace-nowrap"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-none mb-4 whitespace-normal md:whitespace-nowrap"
               style={{ fontFamily: "'Alfa Slab One', sans-serif" }}
             >
               SUNHITH REDDY
@@ -79,7 +79,7 @@ export default function Landing() {
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +102,7 @@ export default function Landing() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -196,7 +196,7 @@ export default function Landing() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -298,7 +298,7 @@ export default function Landing() {
 
       {/* Education Section */}
       <section id="education" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -324,7 +324,7 @@ export default function Landing() {
 
       {/* Experience Section */}
       <section id="experience" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -362,7 +362,7 @@ export default function Landing() {
 
       {/* Certifications Section */}
       <section id="certifications" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -441,7 +441,7 @@ export default function Landing() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-[#8c1b1b]">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -452,7 +452,7 @@ export default function Landing() {
               Get In Touch
             </h2>
             
-            <Card className="border border-white/20 bg-transparent p-12">
+            <Card className="border border-white/20 bg-transparent p-8 md:p-12">
               <p className="text-xl md:text-2xl text-white/90 mb-8">
                 Let's build something amazing together!
               </p>
@@ -461,7 +461,7 @@ export default function Landing() {
                 <Button
                   size="lg"
                   className="bg-gray-900 hover:bg-gray-800 text-white font-medium text-base px-6 py-6"
-                  onClick={() => (window.location.href = "mailto:iamtsr2004@gmail.com")}
+                  onClick={() => (window.location.href = "mailto:iamtsrg2004@gmail.com")}
                 >
                   <Mail className="mr-2 h-5 w-5" /> Email
                 </Button>
@@ -494,7 +494,7 @@ export default function Landing() {
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-[#8c1b1b] border-t border-white/20">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <p className="text-white font-medium text-base">
             © 2024 Sunhith Reddy. All rights reserved.
           </p>
