@@ -372,17 +372,20 @@ export default function Landing() {
                     }}
                   />
                   <div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-white">Certified Software Engineer</h3>
+                    {/* Title row with right-aligned link on the same line */}
+                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                      <h3 className="text-xl md:text-2xl font-semibold text-white">Certified Software Engineer</h3>
+                      <a
+                        href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white underline hover:text-white/90 text-sm md:text-base shrink-0"
+                      >
+                        View Credential
+                      </a>
+                    </div>
                     <p className="text-white/80 text-base md:text-lg">HackerRank • Issued Mar 2025</p>
                     <p className="text-white/70 text-sm md:text-base mt-1">Credential ID: 4DDBDD33AC34</p>
-                    <a
-                      href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white underline hover:text-white/90 mt-2 inline-block"
-                    >
-                      View Credential
-                    </a>
                   </div>
                 </div>
               </Card>
@@ -400,17 +403,20 @@ export default function Landing() {
                     }}
                   />
                   <div>
-                    <h3 className="text-xl md:text-2xl font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
+                    {/* Title row with right-aligned link on the same line */}
+                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                      <h3 className="text-xl md:text-2xl font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
+                      <a
+                        href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white underline hover:text-white/90 text-sm md:text-base shrink-0"
+                      >
+                        View Credential
+                      </a>
+                    </div>
                     <p className="text-white/80 text-base md:text-lg">Google • Issued Jun 2024</p>
                     <p className="text-white/70 text-sm md:text-base mt-1">Credential ID: UHXWNFX8Q36Q</p>
-                    <a
-                      href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white underline hover:text-white/90 mt-2 inline-block"
-                    >
-                      View Credential
-                    </a>
                   </div>
                 </div>
               </Card>
