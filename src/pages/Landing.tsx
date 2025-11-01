@@ -26,7 +26,7 @@ export default function Landing() {
 
         {/* Top Navigation */}
         <div className="absolute top-0 left-0 right-0 flex justify-between items-start p-8 z-20">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-[0.6rem]">
             <span className="text-white font-bold text-lg">Sunhith Reddy</span>
             <span className="flex items-center gap-2">
               <span className="relative flex h-3 w-3">
