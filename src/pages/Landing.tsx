@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code, Mail, Github, Linkedin, GraduationCap, BadgeCheck, Instagram } from "lucide-react";
+import { Briefcase, Code, Cpu, Globe, Users, Mail, Github, Linkedin, GraduationCap, BadgeCheck, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 
 export default function Landing() {
   // Removed right-side quote and links per request
@@ -117,84 +112,83 @@ export default function Landing() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Skills
             </h2>
-            
-            <Card className="border border-white/20 bg-transparent p-2 md:p-4">
-              <Accordion
-                type="multiple"
-                defaultValue={["technical", "areas"]} // open Technical & Areas; keep Professional minimized
-                className="text-white"
-              >
-                <AccordionItem value="technical">
-                  <AccordionTrigger className="hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <Code className="h-5 w-5 text-white" />
-                      <span className="text-lg font-semibold">Technical Skills</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <motion.ul
-                      initial={{ opacity: 0, y: 8 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                      viewport={{ once: true }}
-                      className="text-white/80 text-sm md:text-base space-y-2 pl-6 list-disc"
-                    >
-                      <li>Programming: JavaScript, Python, HTML, CSS</li>
-                      <li>Frameworks &amp; Tools: React, Node.js, TensorFlow, OpenCV</li>
-                      <li>AI &amp; ML: Model training, feature engineering, evaluation metrics (Accuracy, F1-score, AUC-ROC)</li>
-                      <li>Web Development: Front-end and full-stack development, responsive design, authentication systems</li>
-                      <li>Data Handling: Preprocessing, visualization, optimization, dataset management</li>
-                    </motion.ul>
-                  </AccordionContent>
-                </AccordionItem>
 
-                <AccordionItem value="professional">
-                  <AccordionTrigger className="hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <Briefcase className="h-5 w-5 text-white" />
-                      <span className="text-lg font-semibold">Professional Skills</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <motion.ul
-                      initial={{ opacity: 0, y: 8 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                      viewport={{ once: true }}
-                      className="text-white/80 text-sm md:text-base space-y-2 pl-6 list-disc"
-                    >
-                      <li>Problem-Solving: Strong analytical mindset with a focus on efficiency and accuracy</li>
-                      <li>Team Collaboration: Experience working in group-based academic and freelance projects</li>
-                      <li>Adaptability: Quick learner, flexible with new technologies and workflows</li>
-                      <li>Creativity: Builds innovative, user-focused solutions and project concepts</li>
-                      <li>Communication: Clear articulation of technical ideas through reports, presentations, and research</li>
-                    </motion.ul>
-                  </AccordionContent>
-                </AccordionItem>
+            <Card className="border border-white/20 bg-transparent p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <Code className="h-5 w-5 text-white" />
+                    <h3 className="text-lg font-semibold text-white">Languages &amp; Tools</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-white/10 text-white border-white/20">Python</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">JavaScript</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">React</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Node.js</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">TensorFlow</Badge>
+                  </div>
+                </motion.div>
 
-                <AccordionItem value="areas">
-                  <AccordionTrigger className="hover:no-underline">
-                    <div className="flex items-center gap-3">
-                      <Code className="h-5 w-5 text-white" />
-                      <span className="text-lg font-semibold">Areas of Interest</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <motion.ul
-                      initial={{ opacity: 0, y: 8 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4 }}
-                      viewport={{ once: true }}
-                      className="text-white/80 text-sm md:text-base space-y-2 pl-6 list-disc"
-                    >
-                      <li>Artificial Intelligence &amp; Machine Learning</li>
-                      <li>Computer Vision</li>
-                      <li>Web &amp; Mobile Application Development</li>
-                      <li>Data-Driven Systems</li>
-                    </motion.ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.05 }}
+                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <Cpu className="h-5 w-5 text-white" />
+                    <h3 className="text-lg font-semibold text-white">AI &amp; ML</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-white/10 text-white border-white/20">Data preprocessing</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Model training</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Evaluation</Badge>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <Globe className="h-5 w-5 text-white" />
+                    <h3 className="text-lg font-semibold text-white">Web Development</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-white/10 text-white border-white/20">Front-end</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Full-stack</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Auth systems</Badge>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.15 }}
+                  className="border border-white/15 rounded-lg p-5 hover:bg-white/5 transition-colors"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <Users className="h-5 w-5 text-white" />
+                    <h3 className="text-lg font-semibold text-white">Soft Skills</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge className="bg-white/10 text-white border-white/20">Problem‑solving</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Teamwork</Badge>
+                    <Badge className="bg-white/10 text-white border-white/20">Adaptability</Badge>
+                  </div>
+                </motion.div>
+              </div>
             </Card>
           </motion.div>
         </div>
