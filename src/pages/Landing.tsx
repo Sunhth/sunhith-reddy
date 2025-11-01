@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code, Cpu, Globe, Users, Mail, Github, Linkedin, GraduationCap, Instagram, BadgeCheck } from "lucide-react";
+import { Briefcase, Code, Cpu, Globe, Users, Mail, Github, Linkedin, GraduationCap, Instagram, BadgeCheck, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { useState } from "react";
 
 export default function Landing() {
   // Removed right-side quote and links per request
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#8c1b1b]">
@@ -45,7 +48,34 @@ export default function Landing() {
               <span className="text-green-500 font-semibold">Available for work</span>
             </span>
           </div>
-          {/* Right-side navigation */}
+
+          {/* Mobile menu */}
+          <div className="md:hidden">
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  aria-label="Open menu"
+                  className="text-white/90 hover:text-white"
+                >
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="bg-[#8c1b1b] border-l border-white/20 text-white">
+                <nav className="mt-10 flex flex-col gap-6 text-lg">
+                  <a href="#projects" onClick={() => setMobileOpen(false)} className="hover:text-white/90">Projects</a>
+                  <a href="#education" onClick={() => setMobileOpen(false)} className="hover:text-white/90">Education</a>
+                  <a href="#experience" onClick={() => setMobileOpen(false)} className="hover:text-white/90">Experience</a>
+                  <a href="#skills" onClick={() => setMobileOpen(false)} className="hover:text-white/90">Skills</a>
+                  <a href="#certifications" onClick={() => setMobileOpen(false)} className="hover:text-white/90">Certifications</a>
+                  <a href="#contact" onClick={() => setMobileOpen(false)} className="hover:text-white/90">Contact</a>
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </div>
+
+          {/* Right-side navigation (desktop) */}
           <nav className="hidden md:flex items-center gap-4 text-white/90">
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#education" className="hover:text-white transition-colors">Education</a>
