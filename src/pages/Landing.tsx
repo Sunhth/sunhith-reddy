@@ -62,7 +62,7 @@ export default function Landing() {
             </h1>
 
             <p className="text-white text-xl md:text-2xl font-medium">
-              Senior Software Engineer, based in Los Angeles
+              Developer, Designer, based in Banglore
             </p>
           </motion.div>
         </div>
