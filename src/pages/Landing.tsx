@@ -358,21 +358,20 @@ export default function Landing() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Certifications</h2>
-            <div className="grid md:grid-cols-2 gap-8 md:gap-10">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-stretch">
               {/* Card 1: Certified Software Engineer */}
-              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5 relative">
-                <div className="flex items-center justify-center gap-3 text-center">
+              <Card className="border border-white/20 bg-transparent p-8 md:p-10 pb-16 md:pb-20 transition-colors hover:bg-white/5 relative h-full">
+                <div className="flex flex-col items-center justify-center gap-3 text-center">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/da68b2ff-5fbd-41e9-afab-92a808c4a368"
                     alt="HackerRank logo"
-                    className="h-8 w-8 rounded-sm object-cover mt-0.5"
+                    className="h-10 w-10 md:h-12 md:w-12 rounded-sm object-cover mb-2"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = "/logo.png";
                     }}
                   />
-                  <div className="text-center">
-                    {/* Title row without the link */}
+                  <div className="text-center space-y-1 md:space-y-1.5">
                     <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">Certified Software Engineer</h3>
                     </div>
@@ -386,26 +385,25 @@ export default function Landing() {
                   href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-[5px] left-0 right-0 text-center text-white hover:text-white/90 text-lg md:text-xl"
+                  className="absolute bottom-[5px] left-0 right-0 text-center text-white hover:text-white/90 text-lg md:text-xl no-underline"
                 >
                   View Credential
                 </a>
               </Card>
 
               {/* Card 2: Google Digital Marketing & E-commerce Specialization */}
-              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5 relative">
-                <div className="flex items-center justify-center gap-3 text-center">
+              <Card className="border border-white/20 bg-transparent p-8 md:p-10 pb-16 md:pb-20 transition-colors hover:bg-white/5 relative h-full">
+                <div className="flex flex-col items-center justify-center gap-3 text-center">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/c933c346-cd52-4bc4-8eb4-753135c8e2bb"
                     alt="Google logo"
-                    className="h-8 w-8 rounded-sm object-cover mt-0.5"
+                    className="h-10 w-10 md:h-12 md:w-12 rounded-sm object-cover mb-2"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = "/logo.png";
                     }}
                   />
-                  <div className="text-center">
-                    {/* Title row without the link */}
+                  <div className="text-center space-y-1 md:space-y-1.5">
                     <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
                     </div>
@@ -419,7 +417,7 @@ export default function Landing() {
                   href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute bottom-[5px] left-0 right-0 text-center text-white hover:text-white/90 text-lg md:text-xl"
+                  className="absolute bottom-[5px] left-0 right-0 text-center text-white hover:text-white/90 text-lg md:text-xl no-underline"
                 >
                   View Credential
                 </a>
