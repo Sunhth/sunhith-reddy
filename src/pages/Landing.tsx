@@ -208,7 +208,7 @@ export default function Landing() {
             </h2>
             
             {/* First row: three projects in one row on large screens */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {[
                 {
                   title: "CardioPredict – AI-driven Heart Disease Prediction System",
@@ -233,9 +233,10 @@ export default function Landing() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.02 }}
+                  className="h-full"
                 >
                   <Card 
-                    className="border border-white/20 bg-transparent p-8 cursor-pointer transition-colors hover:bg-white/5"
+                    className="h-full flex flex-col border border-white/20 bg-transparent p-8 cursor-pointer transition-colors hover:bg-white/5"
                   >
                     <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
                     <p className="text-base text-white/80">{project.desc}</p>
