@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import { Briefcase, Code, Mail, Github, Linkedin, GraduationCap, BadgeCheck, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 export default function Landing() {
   // Removed right-side quote and links per request
@@ -112,63 +118,84 @@ export default function Landing() {
               Skills
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Code,
-                  title: "Technical Skills",
-                  points: [
-                    "Programming: JavaScript, Python, HTML, CSS",
-                    "Frameworks & Tools: React, Node.js, TensorFlow, OpenCV",
-                    "AI & ML: Model training, feature engineering, evaluation metrics (Accuracy, F1-score, AUC-ROC)",
-                    "Web Development: Front-end and full-stack development, responsive design, authentication systems",
-                    "Data Handling: Preprocessing, visualization, optimization, dataset management",
-                  ],
-                },
-                {
-                  icon: Briefcase,
-                  title: "Professional Skills",
-                  points: [
-                    "Problem-Solving: Strong analytical mindset with a focus on efficiency and accuracy",
-                    "Team Collaboration: Experience working in group-based academic and freelance projects",
-                    "Adaptability: Quick learner, flexible with new technologies and workflows",
-                    "Creativity: Builds innovative, user-focused solutions and project concepts",
-                    "Communication: Clear articulation of technical ideas through reports, presentations, and research",
-                  ],
-                },
-                {
-                  icon: Code,
-                  title: "Areas of Interest",
-                  points: [
-                    "Artificial Intelligence & Machine Learning",
-                    "Computer Vision",
-                    "Web & Mobile Application Development",
-                    "Data-Driven Systems",
-                  ],
-                },
-              ].map((skill, index) => (
-                <motion.div
-                  key={skill.title}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Card
-                    className="border border-white/20 bg-transparent p-6 cursor-pointer transition-colors hover:bg-white/5"
-                  >
-                    <skill.icon className="h-10 w-10 mb-4 text-white" strokeWidth={2} />
-                    <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
-                    <ul className="text-white/80 text-sm mt-3 list-disc pl-5 space-y-1">
-                      {skill.points.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
+            <Card className="border border-white/20 bg-transparent p-2 md:p-4">
+              <Accordion
+                type="multiple"
+                defaultValue={["technical", "areas"]} // open Technical & Areas; keep Professional minimized
+                className="text-white"
+              >
+                <AccordionItem value="technical">
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-3">
+                      <Code className="h-5 w-5 text-white" />
+                      <span className="text-lg font-semibold">Technical Skills</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <motion.ul
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="text-white/80 text-sm md:text-base space-y-2 pl-6 list-disc"
+                    >
+                      <li>Programming: JavaScript, Python, HTML, CSS</li>
+                      <li>Frameworks &amp; Tools: React, Node.js, TensorFlow, OpenCV</li>
+                      <li>AI &amp; ML: Model training, feature engineering, evaluation metrics (Accuracy, F1-score, AUC-ROC)</li>
+                      <li>Web Development: Front-end and full-stack development, responsive design, authentication systems</li>
+                      <li>Data Handling: Preprocessing, visualization, optimization, dataset management</li>
+                    </motion.ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="professional">
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-3">
+                      <Briefcase className="h-5 w-5 text-white" />
+                      <span className="text-lg font-semibold">Professional Skills</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <motion.ul
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="text-white/80 text-sm md:text-base space-y-2 pl-6 list-disc"
+                    >
+                      <li>Problem-Solving: Strong analytical mindset with a focus on efficiency and accuracy</li>
+                      <li>Team Collaboration: Experience working in group-based academic and freelance projects</li>
+                      <li>Adaptability: Quick learner, flexible with new technologies and workflows</li>
+                      <li>Creativity: Builds innovative, user-focused solutions and project concepts</li>
+                      <li>Communication: Clear articulation of technical ideas through reports, presentations, and research</li>
+                    </motion.ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="areas">
+                  <AccordionTrigger className="hover:no-underline">
+                    <div className="flex items-center gap-3">
+                      <Code className="h-5 w-5 text-white" />
+                      <span className="text-lg font-semibold">Areas of Interest</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <motion.ul
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4 }}
+                      viewport={{ once: true }}
+                      className="text-white/80 text-sm md:text-base space-y-2 pl-6 list-disc"
+                    >
+                      <li>Artificial Intelligence &amp; Machine Learning</li>
+                      <li>Computer Vision</li>
+                      <li>Web &amp; Mobile Application Development</li>
+                      <li>Data-Driven Systems</li>
+                    </motion.ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </Card>
           </motion.div>
         </div>
       </section>
