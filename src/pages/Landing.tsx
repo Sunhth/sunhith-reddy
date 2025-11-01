@@ -495,7 +495,7 @@ export default function Landing() {
       <footer className="py-8 px-4 bg-[#8c1b1b] border-t border-white/20">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-white font-medium text-base">
-            © 2024 Sunhith Reddy. All rights reserved.
+            © Sunhith Reddy. All rights reserved.
           </p>
         </div>
       </footer>
