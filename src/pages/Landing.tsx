@@ -45,7 +45,7 @@ export default function Landing() {
             </span>
           </div>
           {/* Right-side navigation */}
-          <nav className="hidden md:flex items-center gap-6 text-white/90">
+          <nav className="hidden md:flex items-center gap-4 text-white/90">
             <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#education" className="hover:text-white transition-colors">Education</a>
             <a href="#experience" className="hover:text-white transition-colors">Experience</a>
