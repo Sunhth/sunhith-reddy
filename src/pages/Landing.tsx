@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { Briefcase, Code, Mail, Github, Linkedin, Twitter, GraduationCap, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -44,7 +44,15 @@ export default function Landing() {
               <span className="text-green-500 font-semibold">Available for work</span>
             </span>
           </div>
-          {/* Right-side links and quote removed */}
+          {/* Right-side navigation */}
+          <nav className="hidden md:flex items-center gap-6 text-white/90">
+            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="#education" className="hover:text-white transition-colors">Education</a>
+            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
+            <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+            <a href="#certifications" className="hover:text-white transition-colors">Certifications</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+          </nav>
         </div>
 
         {/* Name Section - Bottom Left */}
@@ -92,7 +100,7 @@ export default function Landing() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4 bg-[#8c1b1b]">
+      <section id="skills" className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -135,7 +143,7 @@ export default function Landing() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 bg-[#8c1b1b]">
+      <section id="projects" className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -175,8 +183,93 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* Education Section */}
+      <section id="education" className="py-20 px-4 bg-[#8c1b1b]">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Education</h2>
+            <div className="grid gap-6">
+              <Card className="border border-white/20 bg-transparent p-8 transition-colors hover:bg-white/5">
+                <div className="flex items-start gap-4">
+                  <GraduationCap className="h-6 w-6 text-white mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">B.Tech in Computer Science</h3>
+                    <p className="text-white/80">Your University • 2021 — 2025</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-4 bg-[#8c1b1b]">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Experience</h2>
+            <div className="grid gap-6">
+              <Card className="border border-white/20 bg-transparent p-8 transition-colors hover:bg-white/5">
+                <div className="flex items-start gap-4">
+                  <Briefcase className="h-6 w-6 text-white mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">Frontend Developer</h3>
+                    <p className="text-white/80">Company Name • 2023 — Present</p>
+                    <p className="text-white/80 mt-2">Building performant, accessible UIs with React and Tailwind.</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 px-4 bg-[#8c1b1b]">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Certifications</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
+                <div className="flex items-start gap-3">
+                  <BadgeCheck className="h-5 w-5 text-white mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Certification Title One</h3>
+                    <p className="text-white/80">Issuer • Year</p>
+                  </div>
+                </div>
+              </Card>
+              <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
+                <div className="flex items-start gap-3">
+                  <BadgeCheck className="h-5 w-5 text-white mt-0.5" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">Certification Title Two</h3>
+                    <p className="text-white/80">Issuer • Year</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-[#8c1b1b]">
+      <section id="contact" className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
