@@ -207,7 +207,8 @@ export default function Landing() {
               Projects
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* First row: three projects in one row on large screens */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "CardioPredict – AI-driven Heart Disease Prediction System",
@@ -224,15 +225,6 @@ export default function Landing() {
                   desc:
                     "A web platform encouraging mental and physical well-being through daily challenges and community-driven progress sharing. Users complete fitness tasks, post updates, and earn virtual coins for customization rewards. Tech Stack: HTML, CSS, JavaScript",
                 },
-                {
-                  title: "Projxty – Real-time Project Marketplace",
-                  desc:
-                    "A live, small-scale project marketplace connecting students, freelancers, and developers. Projxty offers end-to-end project building services including websites, mobile applications, and AI-based systems — a collaborative hub where learning meets execution. Tech Stack: React, Node.js, MongoDB, Firebase",
-                  live: true,
-                  link: "https://projxty.netlify.app",
-                  caption:
-                    "“Building real projects, connecting real talent — Projxty is where ideas become deliverables.”",
-                },
               ].map((project, index) => (
                 <motion.div
                   key={project.title}
@@ -247,30 +239,57 @@ export default function Landing() {
                   >
                     <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
                     <p className="text-base text-white/80">{project.desc}</p>
-
-                    {/* Live project actions */}
-                    {project.live && (
-                      <div className="mt-5 flex items-center gap-3">
-                        <Badge className="bg-green-600 text-white border-white/20">Live</Badge>
-                        <Button
-                          size="sm"
-                          className="bg-gray-900 hover:bg-gray-800 text-white"
-                          onClick={() => window.open(project.link!, "_blank")}
-                        >
-                          Visit Project
-                        </Button>
-                      </div>
-                    )}
-
-                    {/* Optional caption */}
-                    {project.caption && (
-                      <p className="text-white/70 text-sm mt-3 italic">
-                        {project.caption}
-                      </p>
-                    )}
                   </Card>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Second row: Projxty full-width with logo */}
+            <div className="mt-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <Card 
+                  className="border border-white/20 bg-transparent p-8 transition-colors hover:bg-white/5"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <img
+                      src="https://harmless-tapir-303.convex.cloud/api/storage/c7195b04-943c-4ba9-9f55-d963a0896117"
+                      alt="Projxty logo"
+                      className="h-12 w-12 rounded-md object-cover"
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = "/logo.png";
+                      }}
+                    />
+                    <h3 className="text-2xl font-bold text-white">
+                      Projxty – Real-time Project Marketplace
+                    </h3>
+                  </div>
+                  <p className="text-base text-white/80">
+                    A live, small-scale project marketplace connecting students, freelancers, and developers. Projxty offers end-to-end project building services including websites, mobile applications, and AI-based systems — a collaborative hub where learning meets execution. Tech Stack: React, Node.js, MongoDB, Firebase
+                  </p>
+
+                  <div className="mt-5 flex items-center gap-3">
+                    <Badge className="bg-green-600 text-white border-white/20">Live</Badge>
+                    <Button
+                      size="sm"
+                      className="bg-gray-900 hover:bg-gray-800 text-white"
+                      onClick={() => window.open("https://projxty.netlify.app", "_blank")}
+                    >
+                      Visit Project
+                    </Button>
+                  </div>
+
+                  <p className="text-white/70 text-sm mt-3 italic">
+                    "Building real projects, connecting real talent — Projxty is where ideas become deliverables."
+                  </p>
+                </Card>
+              </motion.div>
             </div>
           </motion.div>
         </div>
