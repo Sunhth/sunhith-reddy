@@ -7,7 +7,7 @@ export default function Landing() {
   // Removed right-side quote and links per request
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#8c1b1b]">
       {/* Hero Section */}
       <section className="min-h-screen flex items-end justify-start relative overflow-hidden pb-20 pl-8 md:pl-16 lg:pl-24">
         {/* Full Screen Background Image */}
@@ -62,7 +62,7 @@ export default function Landing() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-gray-50">
+      <section id="about" className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -70,12 +70,12 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               About Me
             </h2>
             
-            <Card className="border border-gray-200 bg-white p-8 md:p-12 shadow-sm">
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            <Card className="border border-white/20 bg-transparent p-8 md:p-12">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                 Hey! I'm Sunhith Reddy, a passionate developer and creative problem solver. 
                 I love building things that make a difference and pushing the boundaries of what's possible with code.
               </p>
@@ -85,7 +85,7 @@ export default function Landing() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -93,7 +93,7 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Skills
             </h2>
             
@@ -115,10 +115,10 @@ export default function Landing() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Card 
-                    className="border border-gray-200 bg-white p-6 text-center cursor-pointer shadow-sm hover:shadow-md transition-shadow"
+                    className="border border-white/20 bg-transparent p-6 text-center cursor-pointer transition-colors hover:bg-white/5"
                   >
-                    <skill.icon className="h-10 w-10 mx-auto mb-4 text-gray-700" strokeWidth={2} />
-                    <h3 className="text-xl font-semibold text-gray-900">{skill.title}</h3>
+                    <skill.icon className="h-10 w-10 mx-auto mb-4 text-white" strokeWidth={2} />
+                    <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
                   </Card>
                 </motion.div>
               ))}
@@ -128,7 +128,7 @@ export default function Landing() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -136,7 +136,7 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Projects
             </h2>
             
@@ -156,10 +156,10 @@ export default function Landing() {
                   whileHover={{ scale: 1.02 }}
                 >
                   <Card 
-                    className="border border-gray-200 bg-white p-8 cursor-pointer shadow-sm hover:shadow-md transition-shadow"
+                    className="border border-white/20 bg-transparent p-8 cursor-pointer transition-colors hover:bg-white/5"
                   >
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                    <p className="text-base text-gray-600">{project.desc}</p>
+                    <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+                    <p className="text-base text-white/80">{project.desc}</p>
                   </Card>
                 </motion.div>
               ))}
@@ -169,7 +169,7 @@ export default function Landing() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#8c1b1b]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -177,12 +177,12 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Get In Touch
             </h2>
             
-            <Card className="border border-gray-200 bg-white p-12 shadow-sm">
-              <p className="text-xl md:text-2xl text-gray-700 mb-8">
+            <Card className="border border-white/20 bg-transparent p-12">
+              <p className="text-xl md:text-2xl text-white/90 mb-8">
                 Let's build something amazing together!
               </p>
               
@@ -218,7 +218,7 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 bg-gray-900">
+      <footer className="py-8 px-4 bg-[#8c1b1b] border-t border-white/20">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-white font-medium text-base">
             © 2024 Sunhith Reddy. All rights reserved.
