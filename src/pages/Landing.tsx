@@ -209,10 +209,30 @@ export default function Landing() {
             
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: "Project One", desc: "An awesome project that does amazing things" },
-                { title: "Project Two", desc: "Another incredible build with cutting-edge tech" },
-                { title: "Project Three", desc: "A revolutionary app that changes everything" },
-                { title: "Project Four", desc: "The future of web development starts here" },
+                {
+                  title: "CardioPredict – AI-driven Heart Disease Prediction System",
+                  desc:
+                    "An intelligent health analysis platform that predicts heart disease risk using ensemble learning, neural networks, and gradient boosting. Evaluated through accuracy, precision, recall, F1-score, and AUC-ROC for clinical reliability. Tech Stack: Python, TensorFlow, Scikit-learn, Flask",
+                },
+                {
+                  title: "AI UPI Fraud Detection System – ML Model for Digital Transaction Security",
+                  desc:
+                    "Detects fraudulent transactions within real-time UPI payment data using supervised machine learning models. Implements data preprocessing, feature selection, and anomaly detection for high accuracy. Tech Stack: Python, Pandas, Random Forest, SVM, Matplotlib",
+                },
+                {
+                  title: "HolisticFit – Task-based Wellness and Fitness Website",
+                  desc:
+                    "A web platform encouraging mental and physical well-being through daily challenges and community-driven progress sharing. Users complete fitness tasks, post updates, and earn virtual coins for customization rewards. Tech Stack: HTML, CSS, JavaScript",
+                },
+                {
+                  title: "Projxty – Real-time Project Marketplace",
+                  desc:
+                    "A live, small-scale project marketplace connecting students, freelancers, and developers. Projxty offers end-to-end project building services including websites, mobile applications, and AI-based systems — a collaborative hub where learning meets execution. Tech Stack: React, Node.js, MongoDB, Firebase",
+                  live: true,
+                  link: "https://projxty.netlify.app",
+                  caption:
+                    "“Building real projects, connecting real talent — Projxty is where ideas become deliverables.”",
+                },
               ].map((project, index) => (
                 <motion.div
                   key={project.title}
@@ -227,6 +247,27 @@ export default function Landing() {
                   >
                     <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
                     <p className="text-base text-white/80">{project.desc}</p>
+
+                    {/* Live project actions */}
+                    {project.live && (
+                      <div className="mt-5 flex items-center gap-3">
+                        <Badge className="bg-green-600 text-white border-white/20">Live</Badge>
+                        <Button
+                          size="sm"
+                          className="bg-gray-900 hover:bg-gray-800 text-white"
+                          onClick={() => window.open(project.link!, "_blank")}
+                        >
+                          Visit Project
+                        </Button>
+                      </div>
+                    )}
+
+                    {/* Optional caption */}
+                    {project.caption && (
+                      <p className="text-white/70 text-sm mt-3 italic">
+                        {project.caption}
+                      </p>
+                    )}
                   </Card>
                 </motion.div>
               ))}
