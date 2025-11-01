@@ -362,7 +362,15 @@ export default function Landing() {
               {/* Card 1: Certified Software Engineer */}
               <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
-                  <BadgeCheck className="h-5 w-5 text-white mt-0.5" />
+                  <img
+                    src="https://harmless-tapir-303.convex.cloud/api/storage/ed869ad6-d649-4a73-b66d-247716c63263"
+                    alt="HackerRank logo"
+                    className="h-6 w-6 mt-0.5 rounded-sm object-cover border border-white/20"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "/logo.png";
+                    }}
+                  />
                   <div>
                     <h3 className="text-lg font-semibold text-white">Certified Software Engineer</h3>
                     <p className="text-white/80">HackerRank • Issued Mar 2025</p>
