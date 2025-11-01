@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Briefcase, Code, Cpu, Globe, Users, Mail, Github, Linkedin, GraduationCap, BadgeCheck, Instagram } from "lucide-react";
+import { Briefcase, Code, Cpu, Globe, Users, Mail, Github, Linkedin, GraduationCap, Instagram, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -390,7 +390,15 @@ export default function Landing() {
               {/* Card 2: Google Digital Marketing & E-commerce Specialization */}
               <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
-                  <BadgeCheck className="h-5 w-5 text-white mt-0.5" />
+                  <img
+                    src="https://harmless-tapir-303.convex.cloud/api/storage/c933c346-cd52-4bc4-8eb4-753135c8e2bb"
+                    alt="Google logo"
+                    className="h-6 w-6 rounded-sm object-cover mt-0.5"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = "/logo.png";
+                    }}
+                  />
                   <div>
                     <h3 className="text-lg font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
                     <p className="text-white/80">Google • Issued Jun 2024</p>
