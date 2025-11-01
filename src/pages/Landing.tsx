@@ -359,21 +359,42 @@ export default function Landing() {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Certifications</h2>
             <div className="grid md:grid-cols-2 gap-6">
+              {/* Card 1: Certified Software Engineer */}
               <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
                   <BadgeCheck className="h-5 w-5 text-white mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Certification Title One</h3>
-                    <p className="text-white/80">Issuer • Year</p>
+                    <h3 className="text-lg font-semibold text-white">Certified Software Engineer</h3>
+                    <p className="text-white/80">HackerRank • Issued Mar 2025</p>
+                    <p className="text-white/70 text-sm mt-1">Credential ID: 4DDBDD33AC34</p>
+                    <a
+                      href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white underline hover:text-white/90 mt-2 inline-block"
+                    >
+                      View Credential
+                    </a>
                   </div>
                 </div>
               </Card>
+
+              {/* Card 2: Google Digital Marketing & E-commerce Specialization */}
               <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
                   <BadgeCheck className="h-5 w-5 text-white mt-0.5" />
                   <div>
-                    <h3 className="text-lg font-semibold text-white">Certification Title Two</h3>
-                    <p className="text-white/80">Issuer • Year</p>
+                    <h3 className="text-lg font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
+                    <p className="text-white/80">Google • Issued Jun 2024</p>
+                    <p className="text-white/70 text-sm mt-1">Credential ID: UHXWNFX8Q36Q</p>
+                    <a
+                      href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white underline hover:text-white/90 mt-2 inline-block"
+                    >
+                      View Credential
+                    </a>
                   </div>
                 </div>
               </Card>
