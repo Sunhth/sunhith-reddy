@@ -13,7 +13,7 @@ export default function Landing() {
         {/* Full Screen Background Image */}
         <div className="absolute inset-0">
           <img
-            src="https://harmless-tapir-303.convex.cloud/api/storage/b893c057-493c-4ac6-89c8-ea6a32c629c5"
+            src="https://harmless-tapir-303.convex.cloud/api/storage/7c5deda2-eec4-405c-955b-3c9f407ed58b"
             alt="Sunhith Reddy"
             className="w-full h-full object-cover"
             // Fallback if remote image fails to load (prevents "refused to connect" blank hero)
@@ -22,7 +22,6 @@ export default function Landing() {
               e.currentTarget.src = "/logo_bg.png";
             }}
           />
-          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         {/* Top Navigation */}
