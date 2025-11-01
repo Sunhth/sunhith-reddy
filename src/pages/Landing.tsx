@@ -360,7 +360,7 @@ export default function Landing() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Certifications</h2>
             <div className="grid md:grid-cols-2 gap-8 md:gap-10">
               {/* Card 1: Certified Software Engineer */}
-              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5">
+              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5 relative">
                 <div className="flex items-start gap-3">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/da68b2ff-5fbd-41e9-afab-92a808c4a368"
@@ -372,26 +372,28 @@ export default function Landing() {
                     }}
                   />
                   <div>
-                    {/* Title row with right-aligned link on the same line */}
-                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                    {/* Title row without the link */}
+                    <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">Certified Software Engineer</h3>
-                      <a
-                        href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white underline hover:text-white/90 text-sm md:text-base shrink-0"
-                      >
-                        View Credential
-                      </a>
                     </div>
                     <p className="text-white/80 text-base md:text-lg">HackerRank • Issued Mar 2025</p>
                     <p className="text-white/70 text-sm md:text-base mt-1">Credential ID: 4DDBDD33AC34</p>
                   </div>
                 </div>
+
+                {/* Bottom-anchored enlarged link (5px from bottom) */}
+                <a
+                  href="https://www.hackerrank.com/certificates/4ddbdd33ac34"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-[5px] left-8 md:left-10 text-white underline hover:text-white/90 text-lg md:text-xl"
+                >
+                  View Credential
+                </a>
               </Card>
 
               {/* Card 2: Google Digital Marketing & E-commerce Specialization */}
-              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5">
+              <Card className="border border-white/20 bg-transparent p-8 md:p-10 transition-colors hover:bg-white/5 relative">
                 <div className="flex items-start gap-3">
                   <img
                     src="https://harmless-tapir-303.convex.cloud/api/storage/c933c346-cd52-4bc4-8eb4-753135c8e2bb"
@@ -403,22 +405,24 @@ export default function Landing() {
                     }}
                   />
                   <div>
-                    {/* Title row with right-aligned link on the same line */}
-                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                    {/* Title row without the link */}
+                    <div className="flex items-center gap-3 flex-wrap">
                       <h3 className="text-xl md:text-2xl font-semibold text-white">Google Digital Marketing & E-commerce Specialization</h3>
-                      <a
-                        href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white underline hover:text-white/90 text-sm md:text-base shrink-0"
-                      >
-                        View Credential
-                      </a>
                     </div>
                     <p className="text-white/80 text-base md:text-lg">Google • Issued Jun 2024</p>
                     <p className="text-white/70 text-sm md:text-base mt-1">Credential ID: UHXWNFX8Q36Q</p>
                   </div>
                 </div>
+
+                {/* Bottom-anchored enlarged link (5px from bottom) */}
+                <a
+                  href="https://www.coursera.org/account/accomplishments/specialization/UHXWNFX8Q36Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-[5px] left-8 md:left-10 text-white underline hover:text-white/90 text-lg md:text-xl"
+                >
+                  View Credential
+                </a>
               </Card>
             </div>
           </motion.div>
