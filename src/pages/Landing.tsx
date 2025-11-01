@@ -337,9 +337,21 @@ export default function Landing() {
                 <div className="flex items-start gap-4">
                   <Briefcase className="h-6 w-6 text-white mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Frontend Developer</h3>
-                    <p className="text-white/80">Company Name • 2023 — Present</p>
-                    <p className="text-white/80 mt-2">Building performant, accessible UIs with React and Tailwind.</p>
+                    <h3 className="text-xl font-semibold text-white">Freelance Developer & Designer</h3>
+                    <p className="text-white/80">Self-employed • 2024 — 2025</p>
+                    <p className="text-white/80 mt-2">
+                      Designing and building delightful, high‑performance websites and apps for startups and creators.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <Badge className="bg-white/10 text-white border-white/20">Web Design</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">Frontend</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">Development</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">Full‑stack</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">UI/UX</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">Branding</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">Animations</Badge>
+                      <Badge className="bg-white/10 text-white border-white/20">Performance</Badge>
+                    </div>
                   </div>
                 </div>
               </Card>
