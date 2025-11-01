@@ -48,7 +48,7 @@ export default function Landing() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-none mb-4 whitespace-nowrap"
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white leading-none mb-4 whitespace-nowrap"
               style={{ fontFamily: "'Alfa Slab One', sans-serif" }}
             >
               SUNHITH REDDY
