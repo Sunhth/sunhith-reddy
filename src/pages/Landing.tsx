@@ -4,17 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 export default function Landing() {
-  const fullText = "Whether it's writing code or structuring a life, I aim for clarity, calm and long-term impact. I believe good systems are built with intent and consistency";
-  // Word-by-word fade-in animation setup
-  const words = fullText.split(" ");
-  const containerVariants = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.12 } },
-  };
-  const wordVariants = {
-    hidden: { opacity: 0, y: 4 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
-  };
+  // Removed right-side quote and links per request
 
   return (
     <div className="min-h-screen bg-white">
@@ -47,27 +37,7 @@ export default function Landing() {
               <span className="text-green-500 font-semibold">Available for work</span>
             </span>
           </div>
-          <div className="flex flex-col items-end gap-6">
-            <div className="flex gap-6 text-white font-medium">
-              <a href="#about" className="hover:text-cyan-400 transition-colors">Download CV</a>
-              <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact Me</a>
-            </div>
-            {/* Narrower container to increase lines and avoid face overlap */}
-            <div className="max-w-[12rem] md:max-w-[16rem] lg:max-w-[22rem]" style={{ marginTop: "15vh", textAlign: "justify" }}>
-              <motion.p
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-                className="text-white text-xs md:text-sm lg:text-base leading-relaxed font-semibold uppercase tracking-wide"
-              >
-                {words.map((word, i) => (
-                  <motion.span key={i} variants={wordVariants} className="inline mr-1">
-                    {word}
-                  </motion.span>
-                ))}
-              </motion.p>
-            </div>
-          </div>
+          {/* Right-side links and quote removed */}
         </div>
 
         {/* Name Section - Bottom Left */}
