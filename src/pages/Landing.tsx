@@ -114,12 +114,38 @@ export default function Landing() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: Code, title: "Frontend" },
-                { icon: Code, title: "Backend" },
-                { icon: Code, title: "Design" },
-                { icon: Briefcase, title: "Leadership" },
-                { icon: Code, title: "Databases" },
-                { icon: Briefcase, title: "DevOps" },
+                {
+                  icon: Code,
+                  title: "Technical Skills",
+                  points: [
+                    "Programming: JavaScript, Python, HTML, CSS",
+                    "Frameworks & Tools: React, Node.js, TensorFlow, OpenCV",
+                    "AI & ML: Model training, feature engineering, evaluation metrics (Accuracy, F1-score, AUC-ROC)",
+                    "Web Development: Front-end and full-stack development, responsive design, authentication systems",
+                    "Data Handling: Preprocessing, visualization, optimization, dataset management",
+                  ],
+                },
+                {
+                  icon: Briefcase,
+                  title: "Professional Skills",
+                  points: [
+                    "Problem-Solving: Strong analytical mindset with a focus on efficiency and accuracy",
+                    "Team Collaboration: Experience working in group-based academic and freelance projects",
+                    "Adaptability: Quick learner, flexible with new technologies and workflows",
+                    "Creativity: Builds innovative, user-focused solutions and project concepts",
+                    "Communication: Clear articulation of technical ideas through reports, presentations, and research",
+                  ],
+                },
+                {
+                  icon: Code,
+                  title: "Areas of Interest",
+                  points: [
+                    "Artificial Intelligence & Machine Learning",
+                    "Computer Vision",
+                    "Web & Mobile Application Development",
+                    "Data-Driven Systems",
+                  ],
+                },
               ].map((skill, index) => (
                 <motion.div
                   key={skill.title}
@@ -129,11 +155,16 @@ export default function Landing() {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <Card 
-                    className="border border-white/20 bg-transparent p-6 text-center cursor-pointer transition-colors hover:bg-white/5"
+                  <Card
+                    className="border border-white/20 bg-transparent p-6 cursor-pointer transition-colors hover:bg-white/5"
                   >
-                    <skill.icon className="h-10 w-10 mx-auto mb-4 text-white" strokeWidth={2} />
+                    <skill.icon className="h-10 w-10 mb-4 text-white" strokeWidth={2} />
                     <h3 className="text-xl font-semibold text-white">{skill.title}</h3>
+                    <ul className="text-white/80 text-sm mt-3 list-disc pl-5 space-y-1">
+                      {skill.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
                   </Card>
                 </motion.div>
               ))}
