@@ -363,9 +363,9 @@ export default function Landing() {
               <Card className="border border-white/20 bg-transparent p-6 transition-colors hover:bg-white/5">
                 <div className="flex items-start gap-3">
                   <img
-                    src="https://harmless-tapir-303.convex.cloud/api/storage/ed869ad6-d649-4a73-b66d-247716c63263"
+                    src="https://harmless-tapir-303.convex.cloud/api/storage/da68b2ff-5fbd-41e9-afab-92a808c4a368"
                     alt="HackerRank logo"
-                    className="h-6 w-6 mt-0.5 rounded-sm object-cover border border-white/20"
+                    className="h-6 w-6 rounded-sm object-cover mt-0.5"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = "/logo.png";
